@@ -267,7 +267,7 @@ public class Main {
 	// Returns all the items in the skip list in order.
 	public ArrayList<Integer> getList() {
 		node bottom = levels.get(0);
-		ArrayList<Integer> res = new ArrayList<Integer>();
+		ArrayList<Integer> res = new ArrayList<>();
 		bottom = bottom.next;
 		while (bottom.data != POS_INF) {
 			res.add(bottom.data);
@@ -333,14 +333,14 @@ public class Main {
 	
 	// Returns all items of the treeset in order.
 	public static ArrayList<Integer> get(TreeSet<Integer> ts) {
-		ArrayList<Integer> res = new ArrayList<Integer>();
-		while (ts.size() > 0) res.add(ts.pollFirst());
+		ArrayList<Integer> res = new ArrayList<>();
+		while (!ts.isEmpty()) res.add(ts.pollFirst());
 		return res;
 	}
 		
 	public static void main(String[] args) {
 
-		basicInsertTest(); //this is just to test whether your insert and delete function work or not.
+		//basicInsertTest(); //this is just to test whether your insert and delete function work or not.
 
 		int[] testSizes = {50000, 100000, 150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000};
 
